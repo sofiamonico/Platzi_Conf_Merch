@@ -9,9 +9,9 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Install Dependencies
-        run: npm install
+        run: npm install --force
       - name: Build
-        run: npm run build
+        run: CLIENT_ID_PP=$CLIENT_ID_PP npm run build
         env:
           CLIENT_ID_PP: ${{ secrets.CLIENT_ID_PP }}
       - name: Archive Production Artifact

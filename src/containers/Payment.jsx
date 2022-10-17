@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { PayPalButton } from 'react-paypal-button';
+import { PayPalButton } from 'react-paypal-button-v2';
 import "../styles/components/Payment.css"
 import AppContext from '../context/AppContext'
 import handleSumarTotal from '../utils/index';
