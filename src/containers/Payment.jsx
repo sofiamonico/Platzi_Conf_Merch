@@ -13,7 +13,7 @@ function Payment() {
 
   const paypalOptions = {
       clientId: 
-      'AZq7zg6ElEM8_skOlf25FNm3SNb0KlZeavHCnUUhcgrgf5DO6qFSns6OFk1BSaw47RrI7Rm002pT9zhG',
+      String(process.env.CLIENT_ID_PP),
       intent: 'capture',
       currency: 'USD'
   }
