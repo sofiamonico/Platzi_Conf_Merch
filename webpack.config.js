@@ -1,13 +1,14 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 // Importamos EnvorinmentPlugin de webpack
 const { EnvironmentPlugin } = require('webpack');
 
 // Importamos y usamos dotenv
 require('dotenv').config();
 
-
+const options = {}; 
 
 module.exports = {
   entry: './src/index.js',
@@ -59,6 +60,7 @@ module.exports = {
     new EnvironmentPlugin([
       'CLIENT_ID_PP'
     ]),
+    new RobotstxtPlugin(options)
 	],
   devServer: {
     static: path.join(__dirname, 'dist'),
